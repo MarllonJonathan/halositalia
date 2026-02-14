@@ -1,0 +1,171 @@
+:root{
+    --black:#111;
+    --beige:#d8cfc4;
+    --light:#f6f2ec;
+    --white:#ffffff;
+}
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    background:var(--light);
+    color:var(--black);
+}
+
+
+
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 8%;
+    background:var(--black);
+    position:sticky;
+    top:0;
+}
+
+.logo{
+    font-family:'Playfair Display', serif;
+    font-size:26px;
+    letter-spacing:4px;
+    color: var(--white);
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:var(--black);
+    margin-left:30px;
+    font-size:14px;
+    letter-spacing:1px;
+}
+
+/* HERO */
+.hero{
+    height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:0 20px;
+}
+
+.hero h1{
+    font-family:'Playfair Display', serif;
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:16px;
+    color:#666;
+    margin-bottom:30px;
+}
+
+.btn-hero{
+    padding:14px 30px;
+    background:var(--black);
+    color:var(--white);
+    text-decoration:none;
+    letter-spacing:1px;
+    transition:0.3s;
+}
+
+.btn-hero:hover{
+    background:var(--beige);
+    color:var(--black);
+}
+
+/* COLLECTION */
+.collection{
+    padding:100px 8%;
+}
+
+.product{
+    display:flex;
+    align-items:center;
+    margin-bottom:100px;
+    gap:60px;
+    opacity:0;
+    transform:translateY(50px);
+    transition:1s ease;
+}
+
+.product:nth-child(even){
+    flex-direction:row-reverse;
+}
+
+.product img{
+    width:50%;
+    transition:0.6s;
+}
+
+.product img:hover{
+    transform:scale(1.05);
+}
+
+.product-info{
+    width:50%;
+}
+
+.product-info h2{
+    font-family:'Playfair Display', serif;
+    font-size:32px;
+    margin-bottom:20px;
+}
+
+.product-info p{
+    color:#666;
+    margin-bottom:25px;
+}
+
+button{
+    padding:12px 28px;
+    border:none;
+    background:var(--black);
+    color:var(--white);
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:var(--beige);
+    color:var(--black);
+}
+
+/* FOOTER */
+footer{
+    background:var(--black);
+    color:var(--white);
+    text-align:center;
+    padding:30px;
+    font-size:14px;
+}
+
+/* ANIMATION */
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .product{
+        flex-direction:column !important;
+    }
+
+    .product img,
+    .product-info{
+        width:100%;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+}
